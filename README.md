@@ -7,3 +7,6 @@ Wink is a Discord bot that sends any new image from Reddit upon user commands.
 
 ## Help
 ![](https://cdn.discordapp.com/attachments/797414934261923860/871473326546116628/unknown.png)
+
+## Contact Me
+Discord: morgan<3#7328
