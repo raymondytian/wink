@@ -58,7 +58,7 @@ class ModCommands(commands.Cog):
                             value='`w!help commands`', inline=True)
             embed.add_field(
                 name='** **', value='*morgan<3#7328*', inline=False)
-            embed.set_thumbnail(url='https://rb.gy/oz9ri1')
+            embed.set_thumbnail(url='https://lh3.googleusercontent.com/proxy/GauWOkRWww6YxYlNBBmCc9dfnCZZK1Suicq9CWOsky6sIrU_I4lo1oti7iWbK-UFiQbSI9a11CdICaaEPCBajw7UsWREXDcdCH-Jyo2IaYcGbD09W2OHx9RkhFrf3g4wKdgzxVU')
 
             await ctx.send(embed=embed)
         # reddit commands
