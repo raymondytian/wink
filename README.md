@@ -8,6 +8,3 @@ See virtually any image uploaded to Reddit with Wink!
 
 ## Help
 <img src="images/commands.png" width="500"/>
-
-## Contact Me
-Discord: morgan<3#7328
