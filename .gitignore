@@ -1,4 +1,3 @@
 /bot/config.json
 /.DS_Store
-/commands.png
-/winkpfp.png
+/bot/cogs/__pycache__

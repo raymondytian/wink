@@ -1,9 +1,9 @@
 # wink-bot
-![](https://images-ext-2.discordapp.net/external/SaDRRd6UhSxODwEDtHNxVP-s_HjwBnKqwFWzScxA9lE/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/714181755418181722/bc117f06a94d0c8df80732611d774a0f.webp)
+![](https://lh3.googleusercontent.com/proxy/GauWOkRWww6YxYlNBBmCc9dfnCZZK1Suicq9CWOsky6sIrU_I4lo1oti7iWbK-UFiQbSI9a11CdICaaEPCBajw7UsWREXDcdCH-Jyo2IaYcGbD09W2OHx9RkhFrf3g4wKdgzxVU)
 
 Wink is a Discord bot that sends any new image from Reddit upon user commands.
 
 [Invite Wink to your server](https://discord.com/api/oauth2/authorize?client_id=714181755418181722&permissions=156766694464&scope=bot)
 
 ## Help
-![](commands.png)
+![](https://cdn.discordapp.com/attachments/797414934261923860/871473326546116628/unknown.png)
