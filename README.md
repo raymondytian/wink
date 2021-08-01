@@ -1,5 +1,5 @@
 # wink-bot
-![](https://lh3.googleusercontent.com/proxy/GauWOkRWww6YxYlNBBmCc9dfnCZZK1Suicq9CWOsky6sIrU_I4lo1oti7iWbK-UFiQbSI9a11CdICaaEPCBajw7UsWREXDcdCH-Jyo2IaYcGbD09W2OHx9RkhFrf3g4wKdgzxVU)
+![](images/pfp.jpeg)
 
 Wink is a Discord bot that sends any new image from Reddit upon user commands.
 
