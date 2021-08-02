@@ -1,4 +1,4 @@
-# wink-bot
+# Wink
 <img src = "images/pfp.jpeg" width="500"/>
 Wink is a Discord bot that works with Reddit images.
 
