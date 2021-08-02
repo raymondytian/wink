@@ -31,5 +31,5 @@ for filename in os.listdir('./cogs'):
 with open('./config.json') as f:
     data = json.load(f)
 
-TOKEN = data['Token']
+TOKEN = os.environ.get('TOKEN')
 client.run(TOKEN)

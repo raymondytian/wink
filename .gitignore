@@ -1,4 +1,3 @@
-#/bot/config.json
 /.DS_Store
 /bot/cogs/__pycache__/commands.cpython-38.pyc
 /bot/cogs/__pycache__/reddit_commands.cpython-38.pyc
