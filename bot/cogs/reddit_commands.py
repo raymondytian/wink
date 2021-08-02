@@ -214,7 +214,7 @@ class RedditCommands(commands.Cog):
 
     # saves incoming messages 
     def save(self, ctx, msg):
-        data = [msg, str(ctx.author), str(ctx.guild.name)]
+        data = [str(ctx.author), str(ctx.guild.name), msg]
         data_detail = [str(ctx.message)]
         with open('messages.csv', 'a', newline='') as f:
             writer = csv.writer(f)
