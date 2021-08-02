@@ -19,6 +19,7 @@ class ModCommands(commands.Cog):
     # ping bot    
     @commands.command()
     async def ping(self, ctx):
+        self.save(ctx, f'w!ping')
         before = time.monotonic()
         message = await ctx.send("Pong!")
         ping = (time.monotonic() - before) * 1000
