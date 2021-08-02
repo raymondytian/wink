@@ -3,6 +3,7 @@ from discord.ext import commands
 import praw
 import random
 from prawcore import NotFound
+import csv
 
 
 class RedditCommands(commands.Cog):
@@ -56,6 +57,8 @@ class RedditCommands(commands.Cog):
     # sends image in reddit submission link
     @commands.command()
     async def image(self, ctx, link=""):
+        self.save(ctx, f'w!random {link}')
+
         if link == "":
             await ctx.send("Please enter a reddit link along with w!image")
             return
@@ -70,6 +73,8 @@ class RedditCommands(commands.Cog):
     # sends random image in a random subreddit
     @commands.command()
     async def random(self, ctx, nsfw=""):
+        self.save(ctx, f'w!random {nsfw}')
+
         has_submissions = False
 
         while has_submissions == False:
@@ -85,6 +90,8 @@ class RedditCommands(commands.Cog):
     # sends a top x image sorted by hot from subreddit
     @commands.command()
     async def hot(self, ctx, sub='aww', lim=50):
+        self.save(ctx, f'w!hot {sub} {lim}')
+
         if self.sub_exists(sub) == False:
             await ctx.send('Invalid subreddit!')
             return
@@ -124,6 +131,8 @@ class RedditCommands(commands.Cog):
     # sends a top x image sorted by top from subreddit
     @commands.command()
     async def top(self, ctx, sub='aww', lim=50):
+        self.save(ctx, f'w!top {sub} {lim}')
+
         if self.sub_exists(sub) == False:
             await ctx.send('Invalid subreddit!')
             return
@@ -164,6 +173,8 @@ class RedditCommands(commands.Cog):
     # sends a new x image sorted by new from subreddit
     @commands.command()
     async def new(self, ctx, sub='aww', lim=50):
+        self.save(ctx, f'w!new {sub} {lim}')
+
         if self.sub_exists(sub) == False:
             await ctx.send('Invalid subreddit!')
             return
@@ -200,6 +211,13 @@ class RedditCommands(commands.Cog):
             return
 
         await self.send_embed(ctx, chosen)
+
+    # saves incoming messages 
+    def save(self, ctx, msg):
+        data = [msg, str(ctx.author), str(ctx.guild.name), str(ctx.message)]
+        with open('messages.csv', 'a', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(data)
 
 
 def setup(client):

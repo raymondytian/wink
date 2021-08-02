@@ -3,22 +3,9 @@ from discord.ext import commands
 import os
 from itertools import cycle
 import json
-import csv
 
 client = commands.Bot(command_prefix='w!')
 client.remove_command('help')
-
-
-# saves incoming messages 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-    if message.content.startswith('w!'):
-        data = [str(message.author), str(message.content), str(message.created_at), str(message.author.id)]
-        with open('messages.csv', 'a', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(data)
 
 # reloads commands when changes are made in cogs
 @client.command()

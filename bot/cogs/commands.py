@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import random
 import time
+import csv
 
 
 class ModCommands(commands.Cog):
@@ -49,6 +50,8 @@ class ModCommands(commands.Cog):
     # help 
     @commands.command()
     async def help(self, ctx, arg=None):
+        self.save(ctx, f'w!help {arg}')
+
         if arg == None:
             embed = discord.Embed(color=0xffb6c1)
             embed.set_author(name='Wink Help Center')
@@ -103,6 +106,13 @@ class ModCommands(commands.Cog):
             await ctx.send(embed=embed)
         else:
             await ctx.send('Invalid argument!')
+
+    # saves incoming messages 
+    def save(self, ctx, msg):
+        data = [msg, str(ctx.author), str(ctx.guild.name), str(ctx.message)]
+        with open('messages.csv', 'a', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(data)
 
 
 def setup(client):
