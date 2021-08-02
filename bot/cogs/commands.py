@@ -109,10 +109,14 @@ class ModCommands(commands.Cog):
 
     # saves incoming messages 
     def save(self, ctx, msg):
-        data = [msg, str(ctx.author), str(ctx.guild.name), str(ctx.message)]
+        data = [msg, str(ctx.author), str(ctx.guild.name)]
+        data_detail = [str(ctx.message)]
         with open('messages.csv', 'a', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(data)
+        with open('messages-detail.csv', 'a', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(data_detail)
 
 
 def setup(client):
