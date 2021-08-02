@@ -110,6 +110,7 @@ class ModCommands(commands.Cog):
 
     # saves incoming messages 
     def save(self, ctx, msg):
+        return
         data = [str(ctx.author), str(ctx.guild.name), msg]
         data_detail = [str(ctx.message)]
         with open('messages.csv', 'a', newline='') as f:

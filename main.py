@@ -27,9 +27,5 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
-# retrieves token to run bot
-with open('./config.json') as f:
-    data = json.load(f)
-
 TOKEN = os.environ.get('TOKEN')
 client.run(TOKEN)
